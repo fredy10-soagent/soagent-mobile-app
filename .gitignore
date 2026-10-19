@@ -1,0 +1,17 @@
+.gradle/
+build/
+local.properties
+.idea/
+*.iml
+# Claves y credenciales
+*.jks
+*.keystore
+*.p12
+*.pfx
+.env
+.env.*
+!.env.example
+secrets.properties
+google-services.json
+*credentials*
+*token*
