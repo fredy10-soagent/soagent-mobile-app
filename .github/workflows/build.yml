@@ -1,5 +1,8 @@
-name: Build APK
-on: [push, workflow_dispatch]
+name: build
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -12,18 +15,12 @@ jobs:
           distribution: 'temurin'
       - name: Setup Android SDK
         uses: android-actions/setup-android@v3
-      - name: Verificar Wrapper
-        run: |
-          chmod +x gradlew
-          ls -lh gradlew gradle/wrapper/
-      - name: Compilar APK
-        run: ./gradlew --no-daemon assembleDebug
-      - name: Verificar APK
-        run: ls -lh app/build/outputs/apk/debug/
-      - name: Publicar APK
+      - name: Grant execute permission for gradlew
+        run: chmod +x gradlew
+      - name: Build Debug APK
+        run: ./gradlew assembleDebug
+      - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
-          name: SO-AGENT-debug
-          path: app/build/outputs/apk/debug/*.apk
-          if-no-files-found: error
-          retention-days: 14
+          name: soagent-debug
+          path: app/build/outputs/apk/debug/app-debug.apk
