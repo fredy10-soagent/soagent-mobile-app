@@ -6,8 +6,8 @@ android {
         applicationId "com.soagent.app"
         minSdk 21
         targetSdk 29
-        versionCode 4
-        versionName "3.0-miui-fix2"
+        versionCode 5
+        versionName "3.0-miui-fix3"
     }
     buildTypes {
         debug { debuggable true }
@@ -20,6 +20,6 @@ android {
 }
 dependencies {
     implementation 'androidx.appcompat:appcompat:1.6.1'
-    implementation 'androidx.activity:activity:1.8.0'
+    implementation 'androidx.activity:activity:1.7.2'
     implementation 'com.google.android.material:material:1.11.0'
 }
