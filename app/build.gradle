@@ -3,13 +3,13 @@ plugins {
 }
 android {
     namespace 'com.soagent.app'
-    compileSdk 34
+    compileSdk 33
     defaultConfig {
         applicationId "com.soagent.app"
         minSdk 24
-        targetSdk 34
-        versionCode 2
-        versionName "2.0-fix"
+        targetSdk 29
+        versionCode 3
+        versionName "3.0-miui-fix"
     }
     buildTypes {
         debug {
