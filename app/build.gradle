@@ -3,11 +3,11 @@ android {
     namespace 'com.soagent.app'
     compileSdk 34
     defaultConfig {
-        applicationId "com.soagent.app"
+        applicationId "com.soagent.app.miui"
         minSdk 21
-        targetSdk 29
-        versionCode 5
-        versionName "3.0-miui-fix3"
+        targetSdk 28
+        versionCode 14
+        versionName "4.0-redmi9-final"
     }
     buildTypes {
         debug { debuggable true }
